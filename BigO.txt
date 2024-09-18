@@ -3,5 +3,44 @@ bài tập 1:
  while(i<n):
     i= i + 1
 
-biểu thức có độ phức tạp là O(n) vì phụ thuộc vào n là số mà vòng lặp while phải thực hiện
-giả sử trường hợp xấu nhất có thể n là hàng tỉ thì độ phức tạp là O(n)
+biểu thức có độ phức tạp là O(n)
+Vòng lặp while sẽ chạy từ i = 0 cho đến khi i >= n.
+Mỗi lần lặp, giá trị của i tăng lên 1 (i = i + 1).
+Vì thế, số lần lặp của vòng lặp là chính xác bằng n.
+Vì vậy, độ phức tạp thời gian của đoạn mã này là O(n), trong đó n là số lần lặp.
+
+bài 2:
+i=0
+ while(i<n):
+    i= i + 100
+
+có độ phức tạp thời gian là O(n/100).
+Vòng lặp bắt đầu với i = 0 và tăng dần giá trị của i thêm 100 sau mỗi lần lặp (i = i + 100).
+Vòng lặp sẽ chạy cho đến khi i >= n. Số lần lặp sẽ là n / 100.
+Tuy nhiên, trong phân tích độ phức tạp Big O, các hằng số như 100 không được tính, do đó độ phức tạp của đoạn mã vẫn là O(n).
+
+bài 3:
+while (i < n):        # (1)
+  while (a < n):      # (2)
+    while (b < n):    # (3)
+      b = b + 1
+    a = a + 1
+  while (c < n):      # (4)
+    c = c + 1
+  i = i + 100         # (5)
+
+Vòng lặp ngoài cùng (1): i tăng thêm 100 mỗi lần lặp (i = i + 100), nên vòng lặp chạy n / 100 lần. Điều này tương đương với O(n/100), và do bỏ hằng số trong Big O, nên vòng lặp này có độ phức tạp O(n).
+
+Vòng lặp thứ hai (2): Vòng lặp này chạy cho đến khi a >= n. Bên trong vòng lặp có một vòng lặp lồng (3) sẽ chạy n lần, và mỗi lần vòng lặp trong kết thúc, a sẽ tăng thêm 1. Điều này có nghĩa là vòng lặp (2) sẽ chạy O(n) lần.
+
+Vòng lặp thứ ba (3): Vòng lặp này chạy cho đến khi b >= n, và mỗi lần lặp sẽ tăng b thêm 1. Vì vậy, vòng lặp này chạy O(n) lần.
+
+Tổng số vòng lặp của vòng (2) và (3) là O(n) * O(n) = O(n^2).
+Vòng lặp thứ tư (4): Vòng lặp này chạy khi c < n, và mỗi lần lặp sẽ tăng c thêm 1. Do đó, vòng lặp này chạy O(n) lần.
+
+Kết hợp các vòng lặp:
+Vòng (1) chạy O(n) lần
+Vòng (2) và (3) chạy O(n^2) lần lòng bên trong vòng (1) nên làm tăng độ phức tạp lên O(n^3).
+Vòng (4) chạy độc lập và thực hiện O(n) lần trong mỗi lần lặp của vòng (1).
+Tổng thể, cả vòng lặp bên trong và vòng lặp ngoài cùng sẽ chạy với độ phức tạp O(n^3) cộng thêm O(n) cho vòng lặp (4).
+Do vòng (2) và (3) chiếm ưu thế về độ phức tạp, tổng độ phức tạp thời gian của đoạn mã này là O(n^3).

@@ -1,0 +1,7 @@
+bài tập 1:
+ i=0
+ while(i<n):
+    i= i + 1
+
+biểu thức có độ phức tạp là O(n) vì phụ thuộc vào n là số mà vòng lặp while phải thực hiện
+giả sử trường hợp xấu nhất có thể n là hàng tỉ thì độ phức tạp là O(n)

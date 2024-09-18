@@ -1,8 +1,8 @@
 # Định nghĩa lại lớp và thêm menu điều khiển với các yêu cầu từ hình ảnh
-import random
+
 
 # Định nghĩa lớp KhoaHoc
-
+import random
 
 class KhoaHoc:
     def __init__(self, maKhoaHoc, tenKhoaHoc, hinhThuc, hocPhi):

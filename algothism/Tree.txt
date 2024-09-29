@@ -1,0 +1,31 @@
+Bài tập 4)Chiều sâu của node. 
+Gốc của cây: Nút A
+Cấu trúc cây: Cây nhị phân, mỗi nút có tối đa 2 nút con (trái và phải).
+Nút cần tìm chiều sâu: Nút C.
+Để xác định chiều sâu của một nút cụ thể, ta thực hiện các bước sau:
+
+Bắt đầu từ gốc: Đặt một biến đếm depth bằng 0.
+Duyệt theo đường đi:
+Nếu nút hiện tại là nút cần tìm, trả về giá trị depth.
+Nếu chưa tìm thấy, tăng depth lên 1 và đi xuống nút con bên trái.
+Nếu vẫn chưa tìm thấy, tăng depth lên 1 và đi xuống nút con bên phải.
+Lặp lại bước 3 cho đến khi tìm thấy nút hoặc duyệt hết cây.
+
+Vì nút C là con của nút A(gốc của cây) thì depth=edge=1
+Bắt đầu từ nút A, depth = 0.
+Đi xuống nút C, depth = 1.
+
+
+Bài tập 5)Chiều cao của node. 
+Nút Z: Là con của nút A.
+Nút Z không có con: Đây là một nút lá.
+Kết luận:
+Vì nút Z là một nút lá, không có bất kỳ nhánh nào đi xuống từ nó, nên chiều cao của nút Z là 0.
+Chiều cao của một nút lá luôn bằng 0 vì không có đường đi nào dài hơn từ nó đến một nút lá khác (chính nó).
+
+Bài tập 6)Kích thước của node.
+Nút A: Là nút gốc của cây.
+Cây con của A: Bao gồm toàn bộ cây, từ nút A cho đến tất cả các nút lá.
+Kích thước của một nút trong cây thường được định nghĩa là tổng số nút trong cây con có gốc là nút đó.
+theo hình thì con liên kết trực tiếp với nút A là 3 nút và liên kết gián tiếp là 6 nút tính thêm nút A thì size là 10.
+

@@ -29,3 +29,8 @@ Cây con của A: Bao gồm toàn bộ cây, từ nút A cho đến tất cả c
 Kích thước của một nút trong cây thường được định nghĩa là tổng số nút trong cây con có gốc là nút đó.
 theo hình thì con liên kết trực tiếp với nút A là 3 nút và liên kết gián tiếp là 6 nút tính thêm nút A thì size là 10.
 
+Bài 2: Điền tên theo từng loại cây
+Cây nhị phân 1: Skewed binary tree
+Cây nhị phân 2: Complete binary tree
+Cây nhị phân 3: Full binary tree
+Cây nhị phân 4: Perfect binary tree

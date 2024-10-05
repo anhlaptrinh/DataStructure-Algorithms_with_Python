@@ -47,8 +47,6 @@ root = {
         }
     }
 }
-
-
 price = {
     "value": 13,
     "left": {
